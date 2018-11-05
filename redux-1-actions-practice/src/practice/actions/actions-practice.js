@@ -1,3 +1,5 @@
+import { Action } from "rxjs/internal/scheduler/Action";
+
 /* 
   EXAMPLE PROBLEM!!!
   
@@ -6,14 +8,14 @@
     - An action creator function called "addTodo" that expects a new todo object as an argument.
 */
 
-export const ADD_TODO = 'ADD_TODO'
+export const ADD_TODO = "ADD_TODO";
 
-export const addTodo = (newTodo) => {
+export const addTodo = newTodo => {
   return {
     type: ADD_TODO,
     payload: newTodo
-  }
-}
+  };
+};
 
 /*
   Problem # 1
@@ -21,8 +23,16 @@ export const addTodo = (newTodo) => {
   Export the following:
     - An action type label that says INCREMENT
     - An action creator function called "increment" that expects no arguments.
+    
 */
 
+export const INCREMENT = "INCREMENT";
+
+export const increment = () => {
+  return {
+    type: INCREMENT
+  };
+};
 
 /*
   Problem # 2
@@ -32,6 +42,14 @@ export const addTodo = (newTodo) => {
     - An action creator function called "addGrocery" that expects one argument "newGroceryItem".
 */
 
+export const ADD_GROCERY = "ADD_GROCERY";
+
+export const addGrocery = newGroceryItem => {
+  return {
+    type: ADD_GROCERY,
+    payload: newGroceryItem
+  };
+};
 
 /*
   Problem # 3
@@ -41,7 +59,14 @@ export const addTodo = (newTodo) => {
     - An action creator function called "updateContact" that expects one argument "updatedContact".
 */
 
+export const UPDATE_CONTACT = "UPDATE_CONTACT";
 
+export const updateContact = updatedContact => {
+  return {
+    type: UPDATE_CONTACT,
+    payload: updatedContact
+  };
+};
 /*
   Problem # 4
 
@@ -50,6 +75,14 @@ export const addTodo = (newTodo) => {
     - An action creator function called "removeUser" that expects one argument "id".
 */
 
+export const REMOVE_USER = "REMOVE_USER";
+
+export const removeUser = id => {
+  return {
+    type: REMOVE_USER,
+    payload: id
+  };
+};
 
 /*
   Problem # 5
@@ -58,3 +91,12 @@ export const addTodo = (newTodo) => {
     - An action type label that says FETCH_USER
     - An action creator function called "fetchUser" that expects one argument "id".
 */
+
+export const FETCH_USER = "FETCH_USER";
+
+export const fetchUser = id => {
+  return {
+    type: FETCH_USER,
+    payload: id
+  };
+};
